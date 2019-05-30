@@ -17,7 +17,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Van23qf\\PHPJwt\\": "src/"
+            "Van23qf\\PHPJwt\\": "src/PHPJwt/"
         }
     }
 }
