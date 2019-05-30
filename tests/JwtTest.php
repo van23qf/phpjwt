@@ -6,7 +6,7 @@
  * Date: 2019/5/30/0030 10:31
  */
 
-namespace Van23qf\Jwt\jwt;
+namespace Van23qf\PHPJwt;
 
 
 class JwtTest extends \PHPUnit_Framework_TestCase

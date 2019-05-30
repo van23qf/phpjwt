@@ -7,7 +7,7 @@
  * Date: 2019/5/30/0030 9:50
  */
 
-namespace Van23qf\Jwt\jwt;
+namespace Van23qf\PHPJwt;
 
 
 class Jwt
