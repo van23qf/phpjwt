@@ -1,0 +1,23 @@
+{
+    "name": "van23qf/phpjwt",
+    "description": "A JWT library for PHP.",
+    "type": "library",
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "van23qf",
+            "email": "qf19910623@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Van23qf\\Jwt\\": "src/"
+        }
+    }
+}
