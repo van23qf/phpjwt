@@ -52,11 +52,19 @@ class Jwt
         if (!$decodeArr) {
             return false;
         }
-        if ($decodeArr['signature'] != $this->makeSignature($decodeArr['header'], $decodeArr['payload'])) {
+        $header = json_decode($decodeArr['header'], true);
+        $payload = json_decode($decodeArr['payload'], true);
+        $signature = $decodeArr['signature'];
+        if (!$header['alg']) {
+            $this->error = 'Algorithm Params Missing';
+            return false;
+        }
+        $this->alg = $header['alg'];
+        if ($signature != $this->makeSignature($decodeArr['header'], $decodeArr['payload'])) {
             $this->error = 'Signature Error';
             return false;
         }
-        $this->data = json_decode($decodeArr['payload'], true);
+        $this->data = $payload;
         return true;
     }
 
